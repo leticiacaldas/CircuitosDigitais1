@@ -1,0 +1,328 @@
+Analysis & Synthesis report for CD1
+Fri Mar 28 13:40:36 2025
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "somador_de_4bits:somador_r|somador_completo:M0"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Mar 28 13:40:36 2025      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; CD1                                        ;
+; Top-level Entity Name              ; ULA_4bits                                  ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 38                                         ;
+;     Total combinational functions  ; 38                                         ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 28                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; ULA_4bits          ; CD1                ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; xor2_ula.vhd                     ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/xor2_ula.vhd         ;         ;
+; or2_ula.vhd                      ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/or2_ula.vhd          ;         ;
+; not2_ula.vhd                     ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/not2_ula.vhd         ;         ;
+; nor2_ula.vhd                     ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/nor2_ula.vhd         ;         ;
+; nand2_ula.vhd                    ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/nand2_ula.vhd        ;         ;
+; and2_ula.vhd                     ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/and2_ula.vhd         ;         ;
+; somador_completo.vhd             ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/somador_completo.vhd ;         ;
+; somador_de_4bits.vhd             ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/somador_de_4bits.vhd ;         ;
+; seg14.vhd                        ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/seg14.vhd            ;         ;
+; ULA_4bits.vhd                    ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/ULA_4bits.vhd        ;         ;
+; shift_left_ula.vhd               ; yes             ; User VHDL File  ; C:/Users/letic/Desktop/Trabalho CDl/shift_left_ula.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 28               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; F[0]~input       ;
+; Maximum fan-out          ; 15               ;
+; Total fan-out            ; 180              ;
+; Average fan-out          ; 1.91             ;
++--------------------------+------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+; |ULA_4bits                      ; 38 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 28   ; 0            ; |ULA_4bits                                                ; work         ;
+;    |seg14:seg7_resultado|       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ULA_4bits|seg14:seg7_resultado                           ; work         ;
+;    |somador_de_4bits:somador_r| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ULA_4bits|somador_de_4bits:somador_r                     ; work         ;
+;       |somador_completo:M1|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ULA_4bits|somador_de_4bits:somador_r|somador_completo:M1 ; work         ;
+;       |somador_completo:M2|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ULA_4bits|somador_de_4bits:somador_r|somador_completo:M2 ; work         ;
+;       |somador_completo:M3|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ULA_4bits|somador_de_4bits:somador_r|somador_completo:M3 ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 8:1                ; 3 bits    ; 15 LEs        ; 15 LEs               ; 0 LEs                  ; No         ; |ULA_4bits|Mux0            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "somador_de_4bits:somador_r|somador_completo:M0" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; ci   ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Fri Mar 28 13:40:25 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CD1 -c CD1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file xor2_ula.vhd
+    Info (12022): Found design unit 1: xor2_ula-arq_xor2
+    Info (12023): Found entity 1: xor2_ula
+Info (12021): Found 2 design units, including 1 entities, in source file or2_ula.vhd
+    Info (12022): Found design unit 1: or2_ula-arq_or2
+    Info (12023): Found entity 1: or2_ula
+Info (12021): Found 2 design units, including 1 entities, in source file not2_ula.vhd
+    Info (12022): Found design unit 1: not2_ula-arq_not2
+    Info (12023): Found entity 1: not2_ula
+Info (12021): Found 2 design units, including 1 entities, in source file nor2_ula.vhd
+    Info (12022): Found design unit 1: nor2_ula-arq_nor2
+    Info (12023): Found entity 1: nor2_ula
+Info (12021): Found 2 design units, including 1 entities, in source file nand2_ula.vhd
+    Info (12022): Found design unit 1: nand2_ula-arq_nand2
+    Info (12023): Found entity 1: nand2_ula
+Info (12021): Found 2 design units, including 1 entities, in source file and2_ula.vhd
+    Info (12022): Found design unit 1: and2_ula-arq_and2
+    Info (12023): Found entity 1: and2_ula
+Info (12021): Found 2 design units, including 1 entities, in source file somador_completo.vhd
+    Info (12022): Found design unit 1: somador_completo-arq
+    Info (12023): Found entity 1: somador_completo
+Info (12021): Found 2 design units, including 1 entities, in source file somador_de_4bits.vhd
+    Info (12022): Found design unit 1: somador_de_4bits-arq
+    Info (12023): Found entity 1: somador_de_4bits
+Info (12021): Found 2 design units, including 1 entities, in source file seg7_somador.vhd
+    Info (12022): Found design unit 1: seg7_somador-arq_seg_7_somador
+    Info (12023): Found entity 1: seg7_somador
+Info (12021): Found 2 design units, including 1 entities, in source file seg14.vhd
+    Info (12022): Found design unit 1: seg14-arq_seg14
+    Info (12023): Found entity 1: seg14
+Info (12021): Found 2 design units, including 1 entities, in source file ula_4bits.vhd
+    Info (12022): Found design unit 1: ULA_4bits-Behavioral
+    Info (12023): Found entity 1: ULA_4bits
+Info (12021): Found 2 design units, including 1 entities, in source file shift_left_ula.vhd
+    Info (12022): Found design unit 1: shift_left_ula-arq_shift_left
+    Info (12023): Found entity 1: shift_left_ula
+Info (12127): Elaborating entity "ULA_4bits" for the top level hierarchy
+Info (12128): Elaborating entity "somador_de_4bits" for hierarchy "somador_de_4bits:somador_r"
+Info (12128): Elaborating entity "somador_completo" for hierarchy "somador_de_4bits:somador_r|somador_completo:M0"
+Info (12128): Elaborating entity "and2_ula" for hierarchy "and2_ula:and_r"
+Info (12128): Elaborating entity "or2_ula" for hierarchy "or2_ula:or_r"
+Info (12128): Elaborating entity "xor2_ula" for hierarchy "xor2_ula:xor_r"
+Info (12128): Elaborating entity "not2_ula" for hierarchy "not2_ula:not_r"
+Info (12128): Elaborating entity "nand2_ula" for hierarchy "nand2_ula:nand_r"
+Info (12128): Elaborating entity "nor2_ula" for hierarchy "nor2_ula:nor_r"
+Info (12128): Elaborating entity "shift_left_ula" for hierarchy "shift_left_ula:shift_left_r"
+Info (12128): Elaborating entity "seg14" for hierarchy "seg14:seg7_resultado"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "S[5]" is stuck at GND
+    Warning (13410): Pin "S[6]" is stuck at VCC
+    Warning (13410): Pin "S[8]" is stuck at GND
+    Warning (13410): Pin "S[9]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 38 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4718 megabytes
+    Info: Processing ended: Fri Mar 28 13:40:36 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:05
+
+

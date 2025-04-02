@@ -1,0 +1,15 @@
+=N:[UsageMeter (2025-03-27 09:41:05 Hora oficial do Brasil)] usage server initial connection
+=N:[License] 
+Licensed for Altair DSim Cloud.
+=N:[License] New lease granted.
+Analyzing...
+=E:[FileNotFound]:
+    The following files specified on the command line could not be opened:    
+
+    library    
+
+    IEEE       
+
+    Simulator invoked from directory: C:\Users\letic\Desktop\Trabalho CDl    
+
+  Altair DSim version: 2025.0.0000 (b:S #c:32 h:e6a01125e5 os:msys2_)
